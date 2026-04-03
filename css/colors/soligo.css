@@ -105,7 +105,7 @@ header.smaller {
 
 /* 13. Hero slider overlay — softer */
 .de-overlay {
-  background: linear-gradient(160deg, rgba(0,20,60,0.65) 0%, rgba(0,44,109,0.4) 100%) !important;
+  background: linear-gradient(160deg, rgba(0,15,45,0.78) 0%, rgba(0,30,80,0.65) 100%) !important;
 }
 
 /* 14. About section bg */
@@ -167,3 +167,37 @@ section { border-radius: 0 !important; }
 /* 28. Smooth links */
 a { transition: color .2s ease !important; }
 footer a:hover { color: #fff !important; }
+
+/* ── Hero text visibility ── */
+.swiper-slide h1,
+.swiper-slide h2,
+.swiper-slide h3,
+.swiper-slide h4,
+.swiper-slide p,
+.swiper-slide .d-title,
+.swiper-slide .d-desc {
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.45) !important;
+}
+.swiper-slide h1 { font-size: clamp(2rem, 5vw, 3.5rem) !important; }
+
+/* Feature bullets in slider */
+.swiper-slide .col-lg-4 h4 {
+  color: #fff !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4) !important;
+}
+.swiper-slide .col-lg-4 p {
+  color: rgba(255,255,255,0.88) !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35) !important;
+}
+
+/* Subtitle pill on hero */
+.swiper-slide .subtitle {
+  text-shadow: none !important;
+}
+
+/* Slider subtitle line */
+.swiper-slide h3 {
+  color: rgba(255,255,255,0.92) !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4) !important;
+}
