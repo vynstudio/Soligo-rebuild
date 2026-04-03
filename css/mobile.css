@@ -1,280 +1,112 @@
 /* ================================================
-   SOLIGO AIR — Mobile First CSS
-   Breakpoints: 767px (mobile), 991px (tablet)
+   SOLIGO AIR — Mobile CSS
+   Only targets ≤767px — desktop untouched
    ================================================ */
 
-/* ── GLOBAL MOBILE ── */
 @media only screen and (max-width: 767px) {
-  /* ── HERO SLIDER TEXT OVERFLOW FIX ── */
-  .sw-caption .container { padding-left: 20px !important; padding-right: 20px !important; }
-  .sw-caption h1, .sw-caption h2, .sw-caption h3, .sw-caption p {
-    padding-left: 0 !important;
-    overflow: visible !important;
-  }
-  .swiper-inner { overflow: hidden !important; }
 
-  /* ── LOGO MOBILE ── */
-
-
-
-
-  /* ── HIDE PHONE BTN IN HEADER on mobile ── */
-  header .btn-main { display: none !important; }
-  header a[href^="tel"] { display: none !important; }
-
-  /* ── SLIDER BUTTONS — fix both showing orange ── */
-  .swiper-slide .btn-main:first-of-type { 
-    background: linear-gradient(135deg,#F75600,#FF7A30) !important; 
-  }
-  .swiper-slide a[href^="tel"] {
-    background: linear-gradient(135deg,#002C6D,#0047B3) !important;
-    color: #fff !important;
-    border: none !important;
-  }
-
-
-
-  /* Base */
-  body { font-size: 15px !important; -webkit-text-size-adjust: 100%; }
+  /* ── BODY ── */
+  body { font-size: 15px !important; -webkit-text-size-adjust: 100%; padding-bottom: 80px !important; }
   .container { padding-left: 16px !important; padding-right: 16px !important; }
   section { padding: 48px 0 !important; }
-  .spacer-double { height: 24px !important; }
-  .spacer-single { height: 12px !important; }
-  .row { --bs-gutter-x: 16px; }
-  * { -webkit-tap-highlight-color: transparent; }
 
-  /* Typography */
+  /* ── TYPOGRAPHY ── */
   h1 { font-size: 1.9rem !important; line-height: 1.2 !important; }
   h2 { font-size: 1.55rem !important; line-height: 1.25 !important; }
   h3 { font-size: 1.25rem !important; }
   h4 { font-size: 1rem !important; }
-  .lead { font-size: 15px !important; }
   p { font-size: 14px !important; line-height: 1.7 !important; }
 
-  /* ── HERO SLIDER (homepage) ── */
+  /* ── HEADER (mobile only tweaks) ── */
+  header { background: #fff !important; }
+  #logo .logo-main { display: none !important; }
+  #logo .logo-scroll,
+  #logo .logo-mobile { display: block !important; height: 36px !important; }
+  header .btn-main { display: none !important; }
+  #mobile-brand { display: block !important; }
+
+  /* White header bg on mobile header bar */
+  header .de-flex { background: #fff !important; }
+  header .container { background: #fff !important; }
+  #menu-btn span { background: #002C6D !important; }
+
+  /* ── HERO SLIDER ── */
   .swiper-slide { min-height: 92vh !important; }
-  .swiper-slide h1 { font-size: 1.75rem !important; line-height: 1.2 !important; }
+  .swiper-slide h1 { font-size: 1.75rem !important; }
   .swiper-slide h3 { font-size: 0.95rem !important; }
   .slider-extra { display: none !important; }
-  .swiper-slide .btn-main {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin-bottom: 10px !important;
-    padding: 14px 20px !important;
-    font-size: 15px !important;
-  }
-  .swiper-slide .d-flex.gap-3 {
-    flex-direction: column !important;
-    gap: 10px !important;
-  }
+  .sw-caption .container { padding-left: 20px !important; padding-right: 20px !important; }
+  .swiper-slide .d-flex.gap-3 { flex-direction: column !important; gap: 10px !important; }
+  .swiper-slide .btn-main { display: block !important; width: 100% !important; text-align: center !important; padding: 14px !important; font-size: 15px !important; }
 
   /* ── HERO SUBHEADER (service/city pages) ── */
-  #subheader { padding: 0 !important; }
-  #subheader .container { padding-top: 100px !important; padding-bottom: 40px !important; }
-  #subheader h1 { font-size: 1.75rem !important; line-height: 1.25 !important; margin-bottom: 12px !important; }
+  #subheader .container { padding-top: 80px !important; padding-bottom: 40px !important; }
+  #subheader h1 { font-size: 1.75rem !important; }
   #subheader p { font-size: 15px !important; font-weight: 600 !important; }
-  #subheader ul { gap: 6px !important; }
-  #subheader ul li { font-size: 12px !important; padding: 5px 12px !important; }
-
-  /* Inline form on hero — full width below text on mobile */
   #subheader .col-lg-5 { margin-top: 24px !important; }
-  #subheader #quote {
-    padding: 24px 20px !important;
-    border-radius: 14px !important;
-  }
-  #subheader #quote h4 { font-size: 1rem !important; }
   #subheader .row.align-items-center { min-height: auto !important; }
 
-
-  
-
-  /* ── ABOUT SECTION ── */
+  /* ── ABOUT ── */
   #about .col-lg-6:first-child { display: none !important; }
-  #about .col-lg-6:last-child { padding: 0 !important; }
-
-  /* ── SERVICES CARDS ── */
-  .de-icon { width: 52px !important; height: 52px !important; }
-  .bg-color-3.padding40 { padding: 24px 18px !important; }
-
-  /* ── WHY SOLIGO checklist ── */
-  .pl-80 { padding-left: 52px !important; }
-
-  /* ── CITY PAGE service cards ── */
-  [style*="border-radius:16px"][style*="padding:28px"] {
-    padding: 20px 18px !important;
-    margin-bottom: 0 !important;
-  }
-
-  /* ── AIR CARE+ CTA PANEL ── */
-  .padding60 { padding: 32px 20px !important; }
-  .padding50 { padding: 28px 20px !important; }
-  .padding40 { padding: 24px 16px !important; }
-
-  /* Air Care+ upsell flex card — stack on mobile */
-  [style*="display:flex;flex-wrap:wrap;align-items:center;gap:32px"] {
-    flex-direction: column !important;
-    gap: 20px !important;
-    padding: 28px 20px !important;
-  }
-  [style*="display:flex;flex-direction:column;gap:12px;min-width:200px"] {
-    width: 100% !important;
-    min-width: unset !important;
-  }
-  [style*="display:flex;flex-direction:column;gap:12px;min-width:200px"] a {
-    text-align: center !important;
-  }
-
-  /* ── HOW IT WORKS ── */
-  .col-lg-3.col-md-6 { margin-bottom: 16px !important; }
-
-  /* ── STATS ── */
-  .de-facts h3 { font-size: 2rem !important; }
-  .de-facts .col-lg-3 { margin-bottom: 20px !important; }
-
-  /* Stats cards in city pages */
-  [style*="font-size:2.5rem;font-weight:900;color:#002C6D"] {
-    font-size: 2rem !important;
-  }
-
-  /* ── TESTIMONIALS ── */
-  .de-reviews { padding: 24px 16px !important; }
-  .de_testi blockquote { padding: 24px 16px !important; }
-
-  /* Service page testimonial — hide image on mobile */
-  section [style*="border-radius:20px;box-shadow"] { display: none !important; }
-  section .col-lg-6.wow.fadeInLeft { display: none !important; }
-  section .col-lg-6.wow.fadeInRight { flex: 0 0 100% !important; max-width: 100% !important; }
-
-  /* ── AREAS CHIPS ── */
-  #areas a {
-    font-size: 13px !important;
-    padding: 6px 14px !important;
-    margin: 3px !important;
-  }
 
   /* ── FAQ ── */
   #faq .col-lg-6:first-child { display: none !important; }
   .accordion-section-title { font-size: 14px !important; padding: 16px 14px !important; }
 
-  /* ── LEAD FORM ── */
+  /* ── PADDING HELPERS ── */
+  .padding60 { padding: 32px 20px !important; }
+  .padding50 { padding: 28px 20px !important; }
+  .padding40 { padding: 24px 16px !important; }
+
+  /* ── CARDS ── */
+  .col-lg-3.col-md-6 { margin-bottom: 16px !important; }
+
+  /* ── TESTIMONIALS ── */
+  .de_testi blockquote { padding: 24px 16px !important; }
+
+  /* ── AREAS CHIPS ── */
+  #areas a { font-size: 13px !important; padding: 6px 14px !important; margin: 3px !important; }
+
+  /* ── FORMS ── */
   #quote { padding: 24px 18px !important; }
-  #quote input, #quote select, #quote textarea {
+  #quote input, #quote select, #quote textarea,
+  input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
     font-size: 16px !important;
     padding: 12px 14px !important;
   }
-  #quote button {
-    width: 100% !important;
-    padding: 15px !important;
-    font-size: 15px !important;
-  }
-  /* Fix col-6 form fields on small screens */
-  #subheader .col-6 { flex: 0 0 50% !important; }
+  #quote button { width: 100% !important; padding: 15px !important; font-size: 15px !important; }
 
   /* ── BLOG CARDS ── */
-  [style*="height:196px;overflow:hidden;flex-shrink:0"] {
-    height: 160px !important;
-  }
-  /* Blog card grid — 1 col on mobile */
-  .row.g-4 > .col-lg-4.col-md-6.d-flex {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-  }
-  /* Air Care+ featured blog card — simplify on mobile */
-  [style*="flex-wrap:wrap;background:linear-gradient(135deg,#001836"] {
-    padding: 24px 20px !important;
-  }
-  /* Hide right stats panel in Air Care+ featured card */
-  [style*="width:320px;flex-shrink:0"] { display: none !important; }
+  [style*="height:196px;overflow:hidden;flex-shrink:0"] { height: 160px !important; }
 
   /* ── BRAND LOGOS ── */
-  #owl-logo img { max-height: 32px !important; }
-  [style*="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px"] {
-    gap: 24px !important;
-  }
-  [style*="height:48px;object-fit:contain"] { height: 36px !important; }
-
-  /* ── FOOTER ── */
-  footer .col-lg-4,
-  footer .col-lg-2 { margin-bottom: 28px !important; }
-  footer a[href^="tel"] { font-size: 1.6rem !important; }
-  footer { padding-top: 48px !important; padding-bottom: 48px !important; }
-
-  /* ── SCROLL TO TOP ── */
-  .float-text { display: none !important; }
+  [style*="height:48px;object-fit:contain"] { height: 32px !important; }
+  [style*="gap:40px;padding:8px 0"] { gap: 20px !important; }
 
   /* ── MISC ── */
   .sm-hide { display: none !important; }
-  .rounded-20, .rounded-30 { border-radius: 12px !important; }
+  .float-text { display: none !important; }
 
-  /* Hide decorative images on mobile to reduce load */
-  .wow.fadeInLeft img.img-fluid { max-height: 280px !important; object-fit: cover !important; }
-
-  /* City page nearby chips */
-  [style*="display:flex;flex-wrap:wrap;justify-content:center;gap:8px"] a {
-    font-size: 12px !important;
-    padding: 6px 12px !important;
+  /* ── SAFE AREA ── */
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    #mobile-cta { padding-bottom: calc(12px + env(safe-area-inset-bottom)) !important; }
   }
 }
 
-/* ── TABLET 768–991px ── */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/* ── TOUCH TARGETS ── */
+@media (hover: none) and (pointer: coarse) {
+  .btn-main { min-height: 48px !important; }
+  button[type="submit"] { min-height: 48px !important; }
+  select, input { min-height: 48px !important; }
+}
 
+/* ── TABLET ── */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   h1 { font-size: 2.4rem !important; }
   h2 { font-size: 2rem !important; }
   .swiper-slide h1 { font-size: 2.2rem !important; }
   .slider-extra { display: none !important; }
   section { padding: 60px 0 !important; }
   .col-lg-3 { flex: 0 0 50% !important; max-width: 50% !important; }
-  #about .col-lg-6:first-child img { max-height: 360px !important; object-fit: cover !important; }
   footer .col-lg-2 { margin-bottom: 24px !important; }
-
-  /* Blog cards — 2 col on tablet */
-  .col-lg-4.col-md-6.d-flex { flex: 0 0 50% !important; max-width: 50% !important; }
-
-  /* Service/city hero form stacks below on tablet */
-  #subheader .col-lg-5 { margin-top: 32px !important; }
-}
-
-/* ── TOUCH TARGETS ── */
-@media (hover: none) and (pointer: coarse) {
-  .btn-main, a.btn-main { min-height: 48px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
-  button[type="submit"] { min-height: 48px !important; }
-  .accordion-section-title { min-height: 52px !important; }
-  #mainmenu li a { padding: 12px 16px !important; }
-  select, input, textarea { min-height: 48px !important; }
-}
-
-/* ── PREVENT iOS INPUT ZOOM ── */
-@media only screen and (max-width: 767px) {
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 16px !important;
-  }
-}
-
-/* ── SAFE AREA (iPhone notch/home bar) ── */
-@supports (padding-bottom: env(safe-area-inset-bottom)) {
-  #mobile-cta {
-    padding-bottom: calc(12px + env(safe-area-inset-bottom)) !important;
-  }
-}
-
-
-/* ── NEW HEADER — body offset ── */
-@media only screen and (max-width: 767px) {
-  #site-header { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 9990 !important; }
-  body { padding-top: 60px !important; }
-  #subheader .container { padding-top: 40px !important; }
-  .swiper-slide { padding-top: 0 !important; }
-}
-@media only screen and (min-width: 768px) {
-  #site-header > div:first-child { height: 70px !important; }
-  #desktop-nav { display: block !important; }
-  #menu-btn { display: none !important; }
-  header span[style*="SOLIGO AIR"] { display: none !important; }
 }
