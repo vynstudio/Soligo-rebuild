@@ -1,3 +1,10 @@
+/* ================================================
+   SOLIGO AIR — Brand Override
+   Imperial Blue #002C6D | Blaze Orange #F75600
+   Blue Bell #0095D9 | Poppins font
+   ================================================ */
+
+/* 1. CSS Variables */
 :root {
   --primary-color: #002C6D;
   --primary-color-rgb: 0, 44, 109;
@@ -6,58 +13,102 @@
   --tertiary-color: #F0F4FA;
   --tertiary-color-rgb: 240, 244, 250;
   --accent-color: #0095D9;
+  --body-font: 'Poppins', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+  --main-font: 'Poppins', sans-serif;
+  --body-font-color: #555;
+  --body-font-size: 16px;
+  --title-font-weight: 700;
 }
 
-/* Override key accent usages to Blue Bell for id-color-2 */
-.id-color-2, .bg-color-2 .id-color-2 {
-  color: #0095D9 !important;
+/* 2. Force Poppins everywhere */
+body, h1, h2, h3, h4, h5, h6,
+p, a, span, div, li, button, input, select, textarea,
+.widget, .de-step-s1, .subtitle, .accordion-section-title,
+.menu-item, #mainmenu, .topbar-widget {
+  font-family: 'Poppins', sans-serif !important;
 }
 
-/* CTA buttons use Blaze Orange */
+/* 3. Headings — Poppins Bold, Imperial Blue */
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
+  color: #002C6D !important;
+}
+.text-light h1, .text-light h2, .text-light h3,
+.text-light h4, .text-light h5,
+.section-dark h1, .section-dark h2, .section-dark h3 {
+  color: #fff !important;
+}
+
+/* 4. Primary colors */
+.bg-color          { background: #002C6D !important; }
+.bg-color-2        { background: #F75600 !important; }
+.bg-color-3        { background: #F0F4FA !important; }
+.id-color          { color: #002C6D !important; }
+.id-color-2        { color: #0095D9 !important; }
+
+/* 5. CTA Buttons */
 .btn-main {
   background: #F75600 !important;
   border-color: #F75600 !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
 }
-.btn-main:hover {
-  background: #d44800 !important;
-}
+.btn-main:hover { background: #d44800 !important; }
+.btn-main.bg-color-2 { background: #F75600 !important; }
 
-/* bg-color-2 = Blaze Orange */
-.bg-color-2 {
-  background: #F75600 !important;
-}
-
-/* bg-color = Imperial Blue */
-.bg-color {
-  background: #002C6D !important;
-}
-
-/* bg-color-3 = light tint */
-.bg-color-3 {
-  background: #F0F4FA !important;
-}
-
-/* id-color = Imperial Blue */
-.id-color {
+/* 6. Subtitle pills */
+.subtitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+  background: rgba(0,44,109,0.08) !important;
   color: #002C6D !important;
 }
-
-/* Topbar, header accent */
-.section-dark, footer.section-dark {
-  background: #001a45 !important;
-}
-
-/* Phone / large CTA color */
-h2.phone, .phone {
+.subtitle.s2 {
+  background: rgba(247,86,0,0.12) !important;
   color: #F75600 !important;
 }
+.subtitle.bg-color-2 {
+  background: #F75600 !important;
+  color: #fff !important;
+}
 
-/* Subtitle pill bg */
-.subtitle {
-  background: rgba(0,44,109,0.08);
-  color: #002C6D;
-}
-.subtitle.s2 {
-  background: rgba(247,86,0,0.12);
-  color: #F75600;
-}
+/* 7. Nav & topbar */
+#topbar { background: #001836 !important; }
+header { font-family: 'Poppins', sans-serif !important; }
+#mainmenu > li > a { font-weight: 600 !important; }
+
+/* 8. Footer */
+footer.section-dark { background: #001836 !important; }
+
+/* 9. Body text color */
+body { color: #444 !important; }
+p { color: #555 !important; }
+
+/* 10. Links in dark sections stay white */
+.section-dark a, footer a { color: rgba(255,255,255,0.7) !important; }
+.section-dark a:hover, footer a:hover { color: #fff !important; }
+
+/* 11. Phone / large orange text */
+h2.phone { color: #F75600 !important; }
+
+/* 12. Stars / ratings */
+.fa-star, .d-stars i { color: #F75600 !important; }
+
+/* 13. Swiper / slider */
+.swiper-button-next, .swiper-button-prev { color: #F75600 !important; }
+.swiper-pagination-bullet-active { background: #F75600 !important; }
+
+/* 14. Step numbers */
+.d-number { color: #F75600 !important; font-weight: 900 !important; font-family: 'Poppins', sans-serif !important; }
+
+/* 15. Accordion */
+.accordion-section-title { color: #002C6D !important; font-weight: 700 !important; }
+
+/* 16. Blog tagline */
+.d-tagline span { background: #F75600 !important; }
+
+/* 17. Service card bg overrides */
+.bg-color.text-light h4, .bg-color-2.text-light h4 { color: #fff !important; }
+.bg-color-3 h4 { color: #002C6D !important; }
