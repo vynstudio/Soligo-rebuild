@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soligoair.shop/sitemap.xml
+
+# Block Netlify system paths
+Disallow: /netlify/
+Disallow: /.netlify/
+Disallow: /api/
