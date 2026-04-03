@@ -109,53 +109,62 @@
                 <!-- page preloader close -->
 
         <!-- header begin -->
-        <header class="transparent scroll-light has-topbar">
-            
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="de-flex sm-pt10">
-                            <div class="de-flex-col">
-                                <!-- logo begin -->
-                                <div id="logo">
-                                    <a href="index.html">
-                                        <img class="logo-main" src="https://soligoair.shop/icon-white.png" alt="Soligo Air" style="height:40px">
-                                        <img class="logo-scroll" src="https://soligoair.shop/icon-v2.png" alt="Soligo Air" style="height:42px">
-                                        <img class="logo-mobile" src="https://soligoair.shop/icon-v2.png" alt="Soligo Air" style="height:42px">
-                                    </a>
-                                </div>
-                                <!-- logo close -->
-                            </div>
-                            <div class="de-flex-col header-col-mid">
-                                <ul id="mainmenu">
-                                    <li><a class="menu-item" href="#">Services</a>
-                                        <ul>
-                                            <li><a class="menu-item" href="service-repair.html">AC Repair</a></li>
-                                            <li><a class="menu-item" href="service-replacement.html">AC Replacement</a></li>
-                                            <li><a class="menu-item" href="service-installation.html">New Installation</a></li>
-                                            <li><a class="menu-item" href="service-tuneup.html">Tune-Up &amp; Maintenance</a></li>
-                                            <li><a class="menu-item" href="service-iaq.html">Indoor Air Quality</a></li>
-                                            <li><a class="menu-item" href="air-care.html">Air Care+ Membership</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="air-care.html">Air Care+</a></li>
-                                    <li><a class="menu-item" href="#reviews">Reviews</a></li>
-                                    <li><a class="menu-item" href="#about">About</a></li>
-                                    <li><a class="menu-item" href="#areas">Areas</a></li>
-                                    <li><a class="menu-item" href="blog">Blog</a></li>
-                                </ul>
-                            </div>
-                            <div class="de-flex-col">
-                                <div class="menu_side_area">          
-                                    <a href="tel:3213847868" class="btn-main bg-color-2">(321) 384-7868</a>
-                                    <span id="menu-btn"></span>
-                                </div>
-                            </div>
-                        </div>
+        <header id="site-header">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:60px;background:#fff;box-shadow:0 2px 12px rgba(0,44,109,0.08);position:relative;">
+                <!-- Logo -->
+                <a href="index.html" style="display:flex;align-items:center;flex-shrink:0;">
+                    <img src="https://soligoair.shop/icon-v2.png" alt="Soligo Air" style="height:36px;width:auto;">
+                </a>
+                <!-- Center brand (mobile only) -->
+                <span style="position:absolute;left:50%;transform:translateX(-50%);font-family:Poppins,sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;color:#002C6D;white-space:nowrap;pointer-events:none;">SOLIGO AIR</span>
+                <!-- Right: phone + hamburger -->
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <a href="tel:3213847868" id="header-phone" style="display:none;align-items:center;justify-content:center;background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:8px 14px;border-radius:8px;font-weight:800;font-size:13px;text-decoration:none;white-space:nowrap;">📞 Call</a>
+                    <button id="menu-btn" onclick="toggleMenu()" style="background:none;border:none;padding:8px;cursor:pointer;display:flex;flex-direction:column;gap:5px;justify-content:center;width:40px;height:40px;">
+                        <span style="display:block;height:2px;background:#002C6D;border-radius:2px;transition:all .3s;"></span>
+                        <span style="display:block;height:2px;background:#002C6D;border-radius:2px;transition:all .3s;"></span>
+                        <span style="display:block;height:2px;background:#002C6D;border-radius:2px;transition:all .3s;"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- Desktop nav bar (hidden on mobile) -->
+            <div id="desktop-nav" style="display:none;background:#fff;border-top:1px solid rgba(0,44,109,0.08);">
+                <div class="container">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0;height:52px;">
+                        <nav style="display:flex;align-items:center;gap:28px;">
+                            <a href="service-repair.html" style="color:#1a2e5e;font-size:14px;font-weight:600;text-decoration:none;">Services</a>
+                            <a href="air-care.html" style="color:#1a2e5e;font-size:14px;font-weight:600;text-decoration:none;">Air Care+</a>
+                            <a href="#reviews" style="color:#1a2e5e;font-size:14px;font-weight:600;text-decoration:none;">Reviews</a>
+                            <a href="#areas" style="color:#1a2e5e;font-size:14px;font-weight:600;text-decoration:none;">Areas</a>
+                            <a href="blog/index.html" style="color:#1a2e5e;font-size:14px;font-weight:600;text-decoration:none;">Blog</a>
+                        </nav>
+                        <a href="tel:3213847868" style="background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:10px 20px;border-radius:8px;font-weight:800;font-size:14px;text-decoration:none;">(321) 384-7868</a>
                     </div>
                 </div>
             </div>
-            <span id="mobile-brand" style="display:none;position:absolute;left:50%;transform:translateX(-50%);font-family:Poppins,sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;color:#fff;white-space:nowrap;pointer-events:none;">SOLIGO AIR</span>
+            <!-- Mobile menu drawer -->
+            <div id="mobile-menu" style="display:none;position:fixed;top:60px;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:9998;" onclick="toggleMenu()">
+                <div style="background:#fff;padding:0;max-width:300px;height:100%;overflow-y:auto;" onclick="event.stopPropagation()">
+                    <nav style="display:flex;flex-direction:column;">
+                        <a href="index.html" style="padding:18px 24px;color:#1a2e5e;font-weight:700;font-size:15px;text-decoration:none;border-bottom:1px solid #f0f2f8;">🏠 Home</a>
+                        <div style="padding:12px 24px 4px;font-size:11px;font-weight:700;color:#aaa;letter-spacing:1px;text-transform:uppercase;">Services</div>
+                        <a href="service-repair.html" style="padding:14px 24px;color:#1a2e5e;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">🔧 AC Repair</a>
+                        <a href="service-replacement.html" style="padding:14px 24px;color:#1a2e5e;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">♻️ AC Replacement</a>
+                        <a href="service-installation.html" style="padding:14px 24px;color:#1a2e5e;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">⚡ New Installation</a>
+                        <a href="service-tuneup.html" style="padding:14px 24px;color:#1a2e5e;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">🔍 AC Tune-Up</a>
+                        <a href="service-iaq.html" style="padding:14px 24px;color:#1a2e5e;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">🌿 Indoor Air Quality</a>
+                        <a href="air-care.html" style="padding:14px 24px;color:#F75600;font-weight:700;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">⭐ Air Care+ $29/mo</a>
+                        <div style="padding:12px 24px 4px;font-size:11px;font-weight:700;color:#aaa;letter-spacing:1px;text-transform:uppercase;">Company</div>
+                        <a href="#reviews" onclick="toggleMenu()" style="padding:14px 24px;color:#1a2e5e;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">★ Reviews</a>
+                        <a href="#areas" onclick="toggleMenu()" style="padding:14px 24px;color:#1a2e5e;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">📍 Service Areas</a>
+                        <a href="blog/index.html" style="padding:14px 24px;color:#1a2e5e;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #f0f2f8;">📝 Blog</a>
+                        <div style="padding:20px 24px;">
+                            <a href="tel:3213847868" style="display:block;text-align:center;background:linear-gradient(135deg,#002C6D,#0047B3);color:#fff;padding:14px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none;margin-bottom:10px;">📞 Call (321) 384-7868</a>
+                            <a href="#quote" onclick="toggleMenu()" style="display:block;text-align:center;background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:14px;border-radius:10px;font-weight:800;font-size:16px;text-decoration:none;">Get Free Quote</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </header>
         <!-- header close -->
         <!-- content begin -->
@@ -1007,6 +1016,45 @@
   });
 })();
 </script>
+    <script>
+    function toggleMenu() {
+        var menu = document.getElementById("mobile-menu");
+        var btn = document.getElementById("menu-btn");
+        var isOpen = menu.style.display === "flex";
+        menu.style.display = isOpen ? "none" : "flex";
+        document.body.style.overflow = isOpen ? "" : "hidden";
+    }
+    // Show desktop nav + phone on larger screens
+    function handleResize() {
+        var w = window.innerWidth;
+        var desktopNav = document.getElementById("desktop-nav");
+        var headerPhone = document.getElementById("header-phone");
+        var menuBtn = document.getElementById("menu-btn");
+        var brandText = document.querySelector("#site-header span");
+        if (w >= 768) {
+            desktopNav.style.display = "block";
+            headerPhone.style.display = "none";
+            menuBtn.style.display = "none";
+            if (brandText) brandText.style.display = "none";
+        } else {
+            desktopNav.style.display = "none";
+            headerPhone.style.display = "flex";
+            menuBtn.style.display = "flex";
+            if (brandText) brandText.style.display = "block";
+        }
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    // Scroll shadow
+    window.addEventListener("scroll", function() {
+        var h = document.getElementById("site-header");
+        if (window.scrollY > 10) {
+            h.style.boxShadow = "0 2px 20px rgba(0,44,109,0.12)";
+        } else {
+            h.style.boxShadow = "";
+        }
+    });
+    </script>
 </body>
 
 </html>
