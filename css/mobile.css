@@ -121,3 +121,11 @@
   .sw-caption h1, .sw-caption h2 { padding-left: 0 !important; margin-left: 0 !important; }
   .de-has-bg { overflow: hidden !important; }
 }
+
+/* ── LOGO SIZE ── */
+@media only screen and (max-width: 767px) {
+  #logo img { height: 34px !important; width: auto !important; }
+  #logo .logo-main { display: none !important; }
+  #logo .logo-scroll,
+  #logo .logo-mobile { display: block !important; height: 34px !important; }
+}
