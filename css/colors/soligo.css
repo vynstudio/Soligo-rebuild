@@ -168,39 +168,15 @@ section { border-radius: 0 !important; }
 a { transition: color .2s ease !important; }
 footer a:hover { color: #fff !important; }
 
-/* ── Hero text visibility ── */
-.swiper-slide h1,
-.swiper-slide h2,
-.swiper-slide h3,
-.swiper-slide h4,
-.swiper-slide p,
-.swiper-slide .d-title,
-.swiper-slide .d-desc {
-  color: #fff !important;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.45) !important;
-}
-.swiper-slide h1 { font-size: clamp(2rem, 5vw, 3.5rem) !important; }
-
 /* Feature bullets in slider */
-.swiper-slide .col-lg-4 h4 {
-  color: #fff !important;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.4) !important;
-}
-.swiper-slide .col-lg-4 p {
-  color: rgba(255,255,255,0.88) !important;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.35) !important;
-}
+
+
 
 /* Subtitle pill on hero */
-.swiper-slide .subtitle {
-  text-shadow: none !important;
-}
+
 
 /* Slider subtitle line */
-.swiper-slide h3 {
-  color: rgba(255,255,255,0.92) !important;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.4) !important;
-}
+
 
 /* ── Service cards: always light, never blue or orange ── */
 .de-image-text .d-desc,
@@ -237,40 +213,7 @@ footer a:hover { color: #fff !important; }
   color: #6B7A99 !important;
 }
 
-/* ── Hero text on bright images ── */
-.swiper-slide h1,
-.swiper-slide h2 {
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6), 0 4px 20px rgba(0,0,0,0.5) !important;
-  color: #fff !important;
-}
-.swiper-slide h3,
-.swiper-slide p {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 2px 12px rgba(0,0,0,0.5) !important;
-  color: #fff !important;
-}
-.swiper-slide .col-lg-4 h4 {
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-  color: #fff !important;
-}
-.swiper-slide .col-lg-4 p {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7) !important;
-  color: rgba(255,255,255,0.95) !important;
-}
-
 /* ── Header logo visibility ── */
 header.scroll-light #logo .logo-main { opacity: 1 !important; }
 header.scroll-light.scrolled #logo .logo-main { display: none !important; }
 header.scroll-light.scrolled #logo .logo-scroll { display: block !important; }
-
-/* ── Slider bottom feature bullets backdrop ── */
-.swiper-slide .slider-extra {
-  background: linear-gradient(0deg, rgba(0,0,0,0.45) 0%, transparent 100%) !important;
-  padding: 20px 0 10px !important;
-}
-.swiper-slide .col-lg-4 h4 {
-  text-shadow: 0 1px 6px rgba(0,0,0,0.9) !important;
-  font-weight: 800 !important;
-}
-.swiper-slide .col-lg-4 p {
-  text-shadow: 0 1px 4px rgba(0,0,0,0.9) !important;
-}
