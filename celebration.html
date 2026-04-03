@@ -124,22 +124,39 @@
                             <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 40px rgba(0,0,0,0.2);" id="quote">
                                 <h4 style="color:#002C6D;font-weight:800;margin-bottom:4px;font-size:1.1rem;">Get Your Free Quote</h4>
                                 <p style="color:#888;font-size:13px;margin-bottom:20px;">A specialist calls you within minutes.</p>
-                                <form id="city-form">
+                                <form id="page-form">
                                     <div class="row g-2">
-                                        <div class="col-6"><input type="text" name="firstName" class="form-control" placeholder="First Name" required style="border-radius:8px;font-size:14px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-6"><input type="tel" name="phone" class="form-control" placeholder="Phone Number" required style="border-radius:8px;font-size:14px;border:1.5px solid #e0e6f0;"></div>
+                                        <div class="col-6"><input type="text" name="firstName" class="form-control" placeholder="First Name" required style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
+                                        <div class="col-6"><input type="tel" name="phone" class="form-control" placeholder="Phone Number" required style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
                                         <div class="col-12">
-                                            <select name="service" class="form-control" style="border-radius:8px;font-size:14px;border:1.5px solid #e0e6f0;">
-                                                <option value="AC Repair">AC Repair</option>
-                                                <option value="AC Replacement">AC Replacement</option>
-                                                <option value="AC Tune-Up">AC Tune-Up</option>
-                                                <option value="New Installation">New Installation</option>
-                                                <option value="Indoor Air Quality">Indoor Air Quality</option>
+                                            <select name="service" class="form-control" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;">
+                                                <option value="">Service Needed</option>
+                                                <option>AC Repair</option>
+                                                <option>AC Replacement</option>
+                                                <option>AC Tune-Up</option>
+                                                <option>New Installation</option>
+                                                <option>Indoor Air Quality</option>
+                                                <option>Air Care+ Membership</option>
                                             </select>
                                         </div>
-                                        <input type="hidden" name="city" value="Celebration">
-                                        <div class="col-12"><button type="submit" style="width:100%;background:linear-gradient(135deg,#F75600,#FF7A30);border:none;color:#fff;padding:14px;border-radius:8px;font-weight:800;font-size:15px;cursor:pointer;">Get My Free Quote &rsaquo;</button></div>
-                                        <div class="col-12 text-center" style="font-size:12px;color:#aaa;">No commitment · Upfront pricing guaranteed</div>
+                                        <div class="col-12">
+                                            <select name="issue" class="form-control" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;">
+                                                <option value="">What is the issue? (optional)</option>
+                                                <option>AC blowing warm air</option>
+                                                <option>Unit not turning on</option>
+                                                <option>Strange noises</option>
+                                                <option>Weak airflow</option>
+                                                <option>Water leaking</option>
+                                                <option>High electric bill</option>
+                                                <option>Routine maintenance</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12"><input type="hidden" name="city" value="Celebration"></div>
+                                        <div class="col-12">
+                                            <button type="submit" style="width:100%;background:linear-gradient(135deg,#F75600,#FF7A30);border:none;color:#fff;padding:14px;border-radius:8px;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 4px 15px rgba(247,86,0,0.3);">Get My Free Quote &rsaquo;</button>
+                                        </div>
+                                        <div class="col-12 text-center" style="font-size:12px;color:#aaa;">No commitment &middot; Upfront pricing guaranteed</div>
                                     </div>
                                 </form>
                             </div>
@@ -409,10 +426,17 @@
     <style>@media only screen and (max-width:767px){#mobile-cta{display:flex!important;}body{padding-bottom:80px!important;}}</style>
 
     <script>
-    document.getElementById("city-form").addEventListener("submit", async function(e) {
+    document.getElementById("page-form").addEventListener("submit", async function(e) {
         e.preventDefault();
-        var data = {city: "Celebration"};
-        new FormData(this).forEach(function(v,k){data[k]=v;});
+        var data = {};
+        new FormData(this).forEach(function(v,k){ data[k]=v; });
+        try {
+            await fetch("/api/submit-lead", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+            if(typeof gtag!=="undefined") gtag("event","conversion",{"send_to":"AW-17179141807/SI3SCMfOyf8bEK_N0_8_","value":1.0,"currency":"USD"});
+            if(typeof fbq!=="undefined") fbq("track","Lead");
+            this.innerHTML = "<div style='text-align:center;padding:20px;'><h4 style='color:#002C6D;font-weight:800;'>You Are All Set!</h4><p style='color:#666;margin-bottom:12px;'>A specialist will call you shortly.</p><a href='tel:3213847868' style='background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:12px 24px;border-radius:8px;font-weight:800;text-decoration:none;display:inline-block;'>Call Now: (321) 384-7868</a></div>";
+        } catch(err) { alert("Please call us at (321) 384-7868"); }
+    });
         try {
             await fetch("/api/submit-lead", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
             if(typeof gtag!=="undefined")gtag("event","conversion",{"send_to":"AW-17179141807/SI3SCMfOyf8bEK_N0_8_","value":1.0,"currency":"USD"});
