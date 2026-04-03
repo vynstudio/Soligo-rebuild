@@ -75,3 +75,219 @@
   from = "/privacy-policy"
   to = "/privacy-policy.html"
   status = 200
+
+# ── SMS landing pages (GHL campaign URLs) ─────────────────────
+[[redirects]]
+  from = "/repair"
+  to = "/sms-01-repair.html"
+  status = 200
+
+[[redirects]]
+  from = "/replacement"
+  to = "/sms-02-replacement.html"
+  status = 200
+
+[[redirects]]
+  from = "/installation"
+  to = "/sms-03-installation.html"
+  status = 200
+
+[[redirects]]
+  from = "/tune-up"
+  to = "/sms-04-tuneup.html"
+  status = 200
+
+[[redirects]]
+  from = "/air-quality"
+  to = "/sms-05-iaq.html"
+  status = 200
+
+[[redirects]]
+  from = "/air-care-plus"
+  to = "/sms-06-aircareplus.html"
+  status = 200
+
+# ── Utility pages ──────────────────────────────────────────────
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/landing"
+  to = "/index.html"
+  status = 301
+
+# ── Old service URL aliases ────────────────────────────────────
+[[redirects]]
+  from = "/ac-repair"
+  to = "/service-repair.html"
+  status = 301
+
+[[redirects]]
+  from = "/ac-replacement"
+  to = "/service-replacement.html"
+  status = 301
+
+[[redirects]]
+  from = "/ac-installation"
+  to = "/service-installation.html"
+  status = 301
+
+[[redirects]]
+  from = "/ac-tune-up"
+  to = "/service-tuneup.html"
+  status = 301
+
+[[redirects]]
+  from = "/iaq"
+  to = "/service-iaq.html"
+  status = 301
+
+# ── Old aircare URL ────────────────────────────────────────────
+[[redirects]]
+  from = "/aircare"
+  to = "/air-care.html"
+  status = 301
+
+# ── A/B funnel variants → homepage ────────────────────────────
+[[redirects]]
+  from = "/home-v-a"
+  to = "/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/home-v-b"
+  to = "/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/home-v-c"
+  to = "/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/home-v-d"
+  to = "/index.html"
+  status = 301
+
+# ── City / local SEO pages ─────────────────────────────────────
+[[redirects]]
+  from = "/orlando"
+  to = "/orlando.html"
+  status = 200
+
+[[redirects]]
+  from = "/winter-park"
+  to = "/winter-park.html"
+  status = 200
+
+[[redirects]]
+  from = "/kissimmee"
+  to = "/kissimmee.html"
+  status = 200
+
+[[redirects]]
+  from = "/clermont"
+  to = "/clermont.html"
+  status = 200
+
+[[redirects]]
+  from = "/sanford"
+  to = "/sanford.html"
+  status = 200
+
+[[redirects]]
+  from = "/lake-mary"
+  to = "/lake-mary.html"
+  status = 200
+
+[[redirects]]
+  from = "/apopka"
+  to = "/apopka.html"
+  status = 200
+
+[[redirects]]
+  from = "/altamonte-springs"
+  to = "/altamonte-springs.html"
+  status = 200
+
+[[redirects]]
+  from = "/oviedo"
+  to = "/oviedo.html"
+  status = 200
+
+[[redirects]]
+  from = "/davenport"
+  to = "/davenport.html"
+  status = 200
+
+[[redirects]]
+  from = "/celebration"
+  to = "/celebration.html"
+  status = 200
+
+[[redirects]]
+  from = "/longwood"
+  to = "/longwood.html"
+  status = 200
+
+[[redirects]]
+  from = "/ocoee"
+  to = "/ocoee.html"
+  status = 200
+
+[[redirects]]
+  from = "/st-cloud"
+  to = "/st-cloud.html"
+  status = 200
+
+[[redirects]]
+  from = "/winter-garden"
+  to = "/winter-garden.html"
+  status = 200
+
+[[redirects]]
+  from = "/ac-repair-apopka"
+  to = "/ac-repair-apopka.html"
+  status = 200
+
+[[redirects]]
+  from = "/ac-repair-clermont"
+  to = "/ac-repair-clermont.html"
+  status = 200
+
+[[redirects]]
+  from = "/ac-repair-kissimmee"
+  to = "/ac-repair-kissimmee.html"
+  status = 200
+
+[[redirects]]
+  from = "/ac-repair-sanford"
+  to = "/ac-repair-sanford.html"
+  status = 200
+
+[[redirects]]
+  from = "/ac-repair-st-cloud"
+  to = "/ac-repair-st-cloud.html"
+  status = 200
+
+[[redirects]]
+  from = "/ac-repair-winter-garden"
+  to = "/ac-repair-winter-garden.html"
+  status = 200
+
+[[redirects]]
+  from = "/ac-repair-winter-park"
+  to = "/ac-repair-winter-park.html"
+  status = 200
+
+[[redirects]]
+  from = "/ac-repair-cost-orlando-2026"
+  to = "/ac-repair-cost-orlando-2026.html"
+  status = 200
