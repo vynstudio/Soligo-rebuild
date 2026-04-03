@@ -291,3 +291,136 @@
   from = "/ac-repair-cost-orlando-2026"
   to = "/ac-repair-cost-orlando-2026.html"
   status = 200
+
+# ── Old blog posts → new locations (301 preserves SEO) ────────
+[[redirects]]
+  from = "/blog-ac-cost-orlando"
+  to = "/blog/posts/blog-ac-cost-orlando.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-ac-not-cooling"
+  to = "/blog/posts/blog-ac-not-cooling.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-ac-troubleshooting"
+  to = "/blog/posts/blog-ac-troubleshooting.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-best-ac-company-orlando"
+  to = "/blog/posts/blog-best-ac-company-orlando.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-cut-ac-bill"
+  to = "/blog/posts/blog-cut-ac-bill.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-emergency-ac-repair-orlando"
+  to = "/blog/posts/blog-emergency-ac-repair-orlando.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-indoor-air-quality-florida"
+  to = "/blog/posts/blog-indoor-air-quality-florida.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-maintenance-calendar"
+  to = "/blog/posts/blog-maintenance-calendar.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-repair-vs-replace"
+  to = "/blog/posts/blog-repair-vs-replace.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-when-replace-ac-florida"
+  to = "/blog/posts/blog-when-replace-ac-florida.html"
+  status = 301
+
+[[redirects]]
+  from = "/ac-maintenance-checklist-florida"
+  to = "/blog/posts/ac-maintenance-checklist-florida.html"
+  status = 301
+
+[[redirects]]
+  from = "/signs-need-new-ac-florida"
+  to = "/blog/posts/signs-need-new-ac-florida.html"
+  status = 301
+
+[[redirects]]
+  from = "/why-ac-stops-working-florida"
+  to = "/blog/posts/why-ac-stops-working-florida.html"
+  status = 301
+
+# ── Blog post clean URLs ──────────────────────────────────────
+[[redirects]]
+  from = "/blog/posts/blog-ac-cost-orlando"
+  to = "/blog/posts/blog-ac-cost-orlando.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-ac-not-cooling"
+  to = "/blog/posts/blog-ac-not-cooling.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-ac-troubleshooting"
+  to = "/blog/posts/blog-ac-troubleshooting.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-best-ac-company-orlando"
+  to = "/blog/posts/blog-best-ac-company-orlando.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-cut-ac-bill"
+  to = "/blog/posts/blog-cut-ac-bill.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-emergency-ac-repair-orlando"
+  to = "/blog/posts/blog-emergency-ac-repair-orlando.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-indoor-air-quality-florida"
+  to = "/blog/posts/blog-indoor-air-quality-florida.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-maintenance-calendar"
+  to = "/blog/posts/blog-maintenance-calendar.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-repair-vs-replace"
+  to = "/blog/posts/blog-repair-vs-replace.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/blog-when-replace-ac-florida"
+  to = "/blog/posts/blog-when-replace-ac-florida.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/ac-maintenance-checklist-florida"
+  to = "/blog/posts/ac-maintenance-checklist-florida.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/signs-need-new-ac-florida"
+  to = "/blog/posts/signs-need-new-ac-florida.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/posts/why-ac-stops-working-florida"
+  to = "/blog/posts/why-ac-stops-working-florida.html"
+  status = 200
+
