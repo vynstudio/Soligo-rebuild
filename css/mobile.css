@@ -249,3 +249,15 @@
     padding-bottom: calc(12px + env(safe-area-inset-bottom)) !important;
   }
 }
+
+/* ── MOBILE HEADER WHITE ── */
+@media only screen and (max-width: 767px) {
+  header {
+    background: #fff !important;
+    box-shadow: 0 2px 12px rgba(0,44,109,0.1) !important;
+  }
+  #mobile-brand { color: #002C6D !important; }
+  #mainmenu-trigger span,
+  #mainmenu-trigger span::before,
+  #mainmenu-trigger span::after { background: #002C6D !important; }
+}
