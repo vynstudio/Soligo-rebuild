@@ -110,3 +110,14 @@
   .col-lg-3 { flex: 0 0 50% !important; max-width: 50% !important; }
   footer .col-lg-2 { margin-bottom: 24px !important; }
 }
+
+/* ── SLIDER FIXES ── */
+@media only screen and (max-width: 767px) {
+  .swiper-wrapper { flex-wrap: nowrap !important; }
+  .swiper-slide { min-width: 100% !important; width: 100% !important; flex-shrink: 0 !important; }
+  .swiper-inner { overflow: hidden !important; }
+  .sw-caption { overflow: hidden !important; padding-left: 0 !important; }
+  .sw-caption .container { padding-left: 20px !important; padding-right: 20px !important; overflow: hidden !important; }
+  .sw-caption h1, .sw-caption h2 { padding-left: 0 !important; margin-left: 0 !important; }
+  .de-has-bg { overflow: hidden !important; }
+}
