@@ -33,6 +33,18 @@
     <link id="colors" href="../../css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <link href="../../css/colors/soligo.css" rel="stylesheet" type="text/css">
     <link href="../../css/mobile.css" rel="stylesheet" type="text/css">
+<style>
+@media only screen and (max-width:767px){
+  header{background:#fff!important;box-shadow:0 2px 10px rgba(0,44,109,0.08)!important;}
+  header .container{background:#fff!important;}
+  header .de-flex{background:#fff!important;position:relative!important;}
+  #logo .logo-main{display:none!important;}
+  #logo .logo-scroll,#logo .logo-mobile{display:block!important;height:34px!important;}
+  header .btn-main,header a.btn-main{display:none!important;}
+  #mobile-brand{display:block!important;position:absolute!important;left:50%!important;transform:translateX(-50%)!important;font-family:Poppins,sans-serif!important;font-size:13px!important;font-weight:800!important;letter-spacing:2.5px!important;color:#002C6D!important;white-space:nowrap!important;top:50%!important;margin-top:-8px!important;pointer-events:none!important;}
+  #menu-btn{display:flex!important;}
+}
+</style>
 </head>
 <body>
     <div id="wrapper">
@@ -86,7 +98,8 @@
                     </div>
                 </div>
             </div>
-            <span id="mobile-brand" style="display:none;position:absolute;left:50%;transform:translateX(-50%);font-family:Poppins,sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;color:#002C6D;white-space:nowrap;pointer-events:none;">SOLIGO AIR</span>
+            
+            <span id="mobile-brand">SOLIGO AIR</span>
         </header>
         <!-- header close -->
 
