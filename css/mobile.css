@@ -59,31 +59,6 @@
   #subheader .row.align-items-center { min-height: auto !important; }
 
 
-
-  /* ── HEADER CENTER BRAND TEXT (mobile only) ── */
-  .de-flex-col.header-col-mid::before {
-    content: "SOLIGO AIR";
-    display: block !important;
-    font-family: "Poppins", sans-serif !important;
-    font-size: 15px !important;
-    font-weight: 800 !important;
-    letter-spacing: 1.5px !important;
-    color: #fff !important;
-    text-align: center !important;
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    top: 50% !important;
-    margin-top: -8px !important;
-    pointer-events: none !important;
-    white-space: nowrap !important;
-  }
-  header.scrolled .de-flex-col.header-col-mid::before {
-    color: #002C6D !important;
-  }
-  /* Hide the desktop nav on mobile */
-  .de-flex-col.header-col-mid ul#mainmenu { display: none !important; }
-
   /* ── HEADER ── */
   header { height: 60px !important; min-height: 60px !important; position: relative !important; }
   header .de-flex { position: relative !important; height: 60px !important; }

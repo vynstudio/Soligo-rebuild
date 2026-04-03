@@ -86,6 +86,7 @@
                     </div>
                 </div>
             </div>
+            <span id="mobile-brand" style="display:none;position:absolute;left:50%;transform:translateX(-50%);font-family:Poppins,sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;color:#fff;white-space:nowrap;pointer-events:none;">SOLIGO AIR</span>
         </header>
         <!-- header close -->
 
@@ -304,5 +305,18 @@
         <a href="../../air-care.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:13px 16px;border-radius:8px;font-weight:800;font-size:15px;text-decoration:none;">Join Air Care+</a>
     </div>
     <style>@media only screen and (max-width:767px){#mobile-cta{display:flex!important;}body{padding-bottom:80px!important;}}</style>
+<script>
+(function(){
+  var el = document.getElementById("mobile-brand");
+  if(!el) return;
+  function show(){ if(window.innerWidth <= 767) el.style.display="block"; else el.style.display="none"; }
+  show();
+  window.addEventListener("resize", show);
+  // Change color on scroll
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 50){ el.style.color="#002C6D"; } else { el.style.color="#fff"; }
+  });
+})();
+</script>
 </body>
 </html>
