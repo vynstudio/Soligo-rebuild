@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #002C6D;
+  --primary-color-rgb: 0, 44, 109;
+  --secondary-color: #F75600;
+  --secondary-color-rgb: 247, 86, 0;
+  --tertiary-color: #F0F4FA;
+  --tertiary-color-rgb: 240, 244, 250;
+  --accent-color: #0095D9;
+}
+
+/* Override key accent usages to Blue Bell for id-color-2 */
+.id-color-2, .bg-color-2 .id-color-2 {
+  color: #0095D9 !important;
+}
+
+/* CTA buttons use Blaze Orange */
+.btn-main {
+  background: #F75600 !important;
+  border-color: #F75600 !important;
+}
+.btn-main:hover {
+  background: #d44800 !important;
+}
+
+/* bg-color-2 = Blaze Orange */
+.bg-color-2 {
+  background: #F75600 !important;
+}
+
+/* bg-color = Imperial Blue */
+.bg-color {
+  background: #002C6D !important;
+}
+
+/* bg-color-3 = light tint */
+.bg-color-3 {
+  background: #F0F4FA !important;
+}
+
+/* id-color = Imperial Blue */
+.id-color {
+  color: #002C6D !important;
+}
+
+/* Topbar, header accent */
+.section-dark, footer.section-dark {
+  background: #001a45 !important;
+}
+
+/* Phone / large CTA color */
+h2.phone, .phone {
+  color: #F75600 !important;
+}
+
+/* Subtitle pill bg */
+.subtitle {
+  background: rgba(0,44,109,0.08);
+  color: #002C6D;
+}
+.subtitle.s2 {
+  background: rgba(247,86,0,0.12);
+  color: #F75600;
+}
