@@ -483,7 +483,7 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="owl-carousel owl-theme wow fadeInUp" id="testimonial-carousel">
+                        <div class="owl-carousel owl-theme wow fadeInUp" id="testimonial-carousel" data-autoplay="true" data-autoplaytimeout="4000" data-autoplayhowerpause="true" data-loop="true">
                             <div class="item">
                                 <div class="de_testi s2">
                                     <blockquote style="position:relative;">
@@ -948,6 +948,24 @@
             body { padding-bottom: 80px !important; }
         }
     </style>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            var $tc = jQuery("#testimonial-carousel");
+            if ($tc.length && $tc.hasClass("owl-loaded")) {
+                $tc.data("owl.carousel").settings.autoplay = true;
+                $tc.data("owl.carousel").settings.autoplayTimeout = 4000;
+                $tc.data("owl.carousel").settings.autoplayHoverPause = true;
+                $tc.trigger("refresh.owl.carousel");
+            } else {
+                $tc.on("initialized.owl.carousel", function() {
+                    $tc.data("owl.carousel").settings.autoplay = true;
+                });
+            }
+        }, 800);
+    });
+    </script>
 </body>
 
 </html>
