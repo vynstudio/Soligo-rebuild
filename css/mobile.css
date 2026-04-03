@@ -129,3 +129,11 @@
   #logo .logo-scroll,
   #logo .logo-mobile { display: block !important; height: 34px !important; }
 }
+
+/* ── LOGO ── */
+@media only screen and (max-width: 767px) {
+  #logo img.logo-scroll { display: block !important; height: 34px !important; width: auto !important; }
+  #logo img.logo-main,
+  #logo img.logo-mobile { display: none !important; }
+  #mobile-brand { display: block !important; }
+}
