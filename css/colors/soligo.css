@@ -105,7 +105,7 @@ header.smaller {
 
 /* 13. Hero slider overlay — softer */
 .de-overlay {
-  background: linear-gradient(160deg, rgba(0,15,45,0.78) 0%, rgba(0,30,80,0.65) 100%) !important;
+  background: linear-gradient(160deg, rgba(0,10,35,0.72) 0%, rgba(0,20,60,0.60) 100%) !important;
 }
 
 /* 14. About section bg */
@@ -235,4 +235,24 @@ footer a:hover { color: #fff !important; }
 #services .bg-color p,
 #services .bg-color-2 p {
   color: #6B7A99 !important;
+}
+
+/* ── Hero text on bright images ── */
+.swiper-slide h1,
+.swiper-slide h2 {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6), 0 4px 20px rgba(0,0,0,0.5) !important;
+  color: #fff !important;
+}
+.swiper-slide h3,
+.swiper-slide p {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 2px 12px rgba(0,0,0,0.5) !important;
+  color: #fff !important;
+}
+.swiper-slide .col-lg-4 h4 {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
+  color: #fff !important;
+}
+.swiper-slide .col-lg-4 p {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7) !important;
+  color: rgba(255,255,255,0.95) !important;
 }
