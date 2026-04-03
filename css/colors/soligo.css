@@ -201,3 +201,38 @@ footer a:hover { color: #fff !important; }
   color: rgba(255,255,255,0.92) !important;
   text-shadow: 0 1px 8px rgba(0,0,0,0.4) !important;
 }
+
+/* ── Service cards: always light, never blue or orange ── */
+.de-image-text .d-desc,
+.de-image-text,
+.d-hover-shift .bg-color,
+.d-hover-shift .bg-color-2,
+.de-image-text.bg-color,
+.de-image-text.bg-color-2 {
+  background: #F0F4FF !important;
+  background-image: none !important;
+}
+
+/* Text inside service cards always dark */
+.de-image-text h4,
+.de-image-text .d-desc h4 {
+  color: #1a2e5e !important;
+}
+.de-image-text p,
+.de-image-text .d-desc p {
+  color: #6B7A99 !important;
+}
+
+/* Force all .nft__item_info and card content areas light */
+#services .bg-color,
+#services .bg-color-2 {
+  background: linear-gradient(160deg, #EEF2FF 0%, #F8F9FD 100%) !important;
+}
+#services .bg-color h4,
+#services .bg-color-2 h4 {
+  color: #1a2e5e !important;
+}
+#services .bg-color p,
+#services .bg-color-2 p {
+  color: #6B7A99 !important;
+}
