@@ -5,6 +5,34 @@
 
 /* ── GLOBAL MOBILE ── */
 @media only screen and (max-width: 767px) {
+  /* ── HERO SLIDER TEXT OVERFLOW FIX ── */
+  .sw-caption .container { padding-left: 20px !important; padding-right: 20px !important; }
+  .sw-caption h1, .sw-caption h2, .sw-caption h3, .sw-caption p {
+    padding-left: 0 !important;
+    overflow: visible !important;
+  }
+  .swiper-inner { overflow: hidden !important; }
+
+  /* ── LOGO MOBILE ── */
+  #logo .logo-main { display: none !important; }
+  #logo .logo-scroll { display: none !important; }
+  #logo .logo-mobile { display: block !important; height: 36px !important; }
+
+  /* ── HIDE PHONE BTN IN HEADER on mobile ── */
+  header .btn-main { display: none !important; }
+  header a[href^="tel"] { display: none !important; }
+
+  /* ── SLIDER BUTTONS — fix both showing orange ── */
+  .swiper-slide .btn-main:first-of-type { 
+    background: linear-gradient(135deg,#F75600,#FF7A30) !important; 
+  }
+  .swiper-slide a[href^="tel"] {
+    background: linear-gradient(135deg,#002C6D,#0047B3) !important;
+    color: #fff !important;
+    border: none !important;
+  }
+
+
 
   /* Base */
   body { font-size: 15px !important; -webkit-text-size-adjust: 100%; }
