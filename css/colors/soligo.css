@@ -217,3 +217,20 @@ footer a:hover { color: #fff !important; }
 header.scroll-light #logo .logo-main { opacity: 1 !important; }
 header.scroll-light.scrolled #logo .logo-main { display: none !important; }
 header.scroll-light.scrolled #logo .logo-scroll { display: block !important; }
+
+/* ── Hero overlay — darker for light slider images ── */
+.de-overlay {
+  background: linear-gradient(160deg, rgba(0,10,35,0.72) 0%, rgba(0,20,60,0.58) 100%) !important;
+}
+
+/* ── Slider text — white, no shadow ── */
+.swiper-slide h1,
+.swiper-slide h2,
+.swiper-slide h3,
+.swiper-slide h4,
+.swiper-slide p,
+.swiper-slide .d-title,
+.swiper-slide .d-desc { color: #fff !important; }
+
+/* ── Slider icons — white ── */
+.swiper-slide img.w-80px { filter: brightness(0) invert(1) !important; }
