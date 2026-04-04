@@ -51,6 +51,16 @@
     display: flex !important;
     align-items: center !important;
   }
+  .sw-caption {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    padding: 40px 0 !important;
+  }
+  .slider-title { opacity: 1 !important; transform: none !important; }
+  .sw-text-wrapper { opacity: 1 !important; transform: none !important; }
   .swiper-slide h1 { font-size: 1.75rem !important; }
   .swiper-slide h3 { font-size: 0.95rem !important; }
   .slider-extra { display: none !important; }
