@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/api/submit-lead"
+  to = "/.netlify/functions/submit-lead"
+  status = 200
+
+[[redirects]]
   from = "/service-repair"
   to = "/service-repair.html"
   status = 200
