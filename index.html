@@ -110,25 +110,6 @@
   #menu-btn{display:flex!important;}
 }
 </style>
-<style>
-/* Force hero text visible regardless of swiper state */
-.swiper-slide .slider-title,
-.swiper-slide .slider-teaser,
-.swiper-slide .subtitle,
-.swiper-slide .sw-text-wrapper,
-.swiper-slide .btn-main {
-  opacity: 1 !important;
-  animation: none !important;
-  transform: none !important;
-  visibility: visible !important;
-}
-.swiper-slide .sw-caption {
-  position: relative !important;
-  top: auto !important;
-  transform: none !important;
-  z-index: 10 !important;
-}
-</style>
 </head>
 
 <body>
@@ -185,120 +166,45 @@
         </header>
         <!-- header close -->
 
-        <!-- hero slider begin -->
-        <section class="de-has-bg full-height" style="background:#001830;">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide swiper-slide-active">
-                        <div class="swiper-inner" data-bgimage="url(images/slider/1.webp)" style="position:relative;background-image:url(images/slider/1.webp);background-size:cover;background-position:center;min-height:92vh;display:flex;align-items:center;">
-                            <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,8,30,0.75) 0%,rgba(0,18,55,0.62) 100%);z-index:0;pointer-events:none;"></div>
-                            <div class="sw-caption" style="position:relative;z-index:2;padding-left:0;width:100%;top:auto;transform:none;">
-                                <div class="container">
-                                    <div class="row gx-5 align-items-center">
-                                        <div class="col-lg-8 offset-lg-2 text-center">
-                                            <div class="sw-text-wrapper">
-                                                <div class="subtitle s2 mb-2" style="background:#F75600!important;color:#fff!important;font-weight:700!important;padding:6px 18px!important;border-radius:999px!important;display:inline-block!important;font-size:14px!important;letter-spacing:0.5px!important;">Central Florida HVAC</div>
-                                                <h1 class="slider-title mb-3">Fast &amp; Reliable AC Repair in Orlando</h1>
-                                                <h3 class="slider-teaser mb-3">Same-Day Service &nbsp;|&nbsp; FL Licensed &nbsp;|&nbsp; 0% Financing &nbsp;|&nbsp; 5.0 Rated</h3>
-                                                <a class="btn-main bg-color-2 mb10 mb-3" href="tel:3213847868">(321) 384-7868 — Call Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row g-4 slider-extra sm-hide">
-                                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                                            <div class="relative">
-                                                <img src="images/icons/white/labor.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Licensed Technician">
-                                                <div class="pl-100">
-                                                    <h4>FL Licensed Technicians</h4>
-                                                    <p>EPA-certified, manufacturer-trained. FL #CAC1823002.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                                            <div class="relative">
-                                                <img src="images/icons/white/calendar.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Same-Day Service">
-                                                <div class="pl-100">
-                                                    <h4>Same-Day Service</h4>
-                                                    <p>Fast response across all of Central Florida, anytime.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                                            <div class="relative">
-                                                <img src="images/icons/white/best-price.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Transparent Pricing">
-                                                <div class="pl-100">
-                                                    <h4>Transparent Pricing</h4>
-                                                    <p>Upfront quotes, no hidden charges, 0% financing.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+        <!-- hero begin -->
+        <section id="hero" style="position:relative;min-height:100vh;background:url(images/slider/1.webp) center/cover no-repeat;display:flex;align-items:center;">
+            <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,8,30,0.82) 0%,rgba(0,30,70,0.68) 100%);z-index:0;"></div>
+            <div style="position:relative;z-index:1;width:100%;padding:120px 0 80px;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div style="display:inline-block;background:#F75600;color:#fff;font-size:13px;font-weight:700;padding:6px 20px;border-radius:999px;letter-spacing:0.5px;margin-bottom:24px;">Central Florida HVAC</div>
+                            <h1 style="font-size:clamp(2rem,5vw,3.8rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:20px;letter-spacing:-0.02em;">Fast &amp; Reliable<br>AC Services in <span style="color:#F75600;">Orlando</span></h1>
+                            <p style="font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.85);margin-bottom:36px;line-height:1.6;">Same-Day Service &nbsp;·&nbsp; FL Licensed &nbsp;·&nbsp; 0% Financing &nbsp;·&nbsp; 5.0 ⭐ Rated</p>
+                            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+                                <a href="tel:3213847868" onclick="gtagConversionCall()" style="display:inline-flex;align-items:center;gap:10px;background:#F75600;color:#fff;padding:16px 32px;border-radius:8px;font-weight:800;font-size:1.05rem;text-decoration:none;box-shadow:0 4px 20px rgba(247,86,0,0.4);transition:transform .15s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">📞 (321) 384-7868</a>
+                                <a href="#quote" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);color:#fff;padding:16px 32px;border-radius:8px;font-weight:700;font-size:1.05rem;text-decoration:none;border:1.5px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px);transition:transform .15s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Get Free Quote →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- trust bar -->
+                    <div class="row justify-content-center" style="margin-top:60px;">
+                        <div class="col-lg-10">
+                            <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
+                                <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.85);">
+                                    <img src="images/icons/white/labor.webp" style="height:36px;width:auto;" alt="Licensed">
+                                    <div><div style="font-weight:700;font-size:0.9rem;">FL Licensed</div><div style="font-size:0.78rem;opacity:0.7;">CAC1823002</div></div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.85);">
+                                    <img src="images/icons/white/calendar.webp" style="height:36px;width:auto;" alt="Same Day">
+                                    <div><div style="font-weight:700;font-size:0.9rem;">Same-Day</div><div style="font-size:0.78rem;opacity:0.7;">Available 24/7</div></div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.85);">
+                                    <img src="images/icons/white/best-price.webp" style="height:36px;width:auto;" alt="Pricing">
+                                    <div><div style="font-weight:700;font-size:0.9rem;">Upfront Pricing</div><div style="font-size:0.78rem;opacity:0.7;">0% Financing</div></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="swiper-inner" data-bgimage="url(images/slider/2.webp)" style="position:relative;background-image:url(images/slider/2.webp);background-size:cover;background-position:center;min-height:92vh;display:flex;align-items:center;">
-                            <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,8,30,0.75) 0%,rgba(0,18,55,0.62) 100%);z-index:0;pointer-events:none;"></div>
-                            <div class="sw-caption" style="position:relative;z-index:2;padding-left:0;width:100%;top:auto;transform:none;">
-                                <div class="container">
-                                    <div class="row gx-5 align-items-center">
-                                        <div class="col-lg-8 offset-lg-2 text-center">
-                                            <div class="sw-text-wrapper">
-                                                <div class="subtitle s2 mb-2" style="background:#F75600!important;color:#fff!important;font-weight:700!important;padding:6px 18px!important;border-radius:999px!important;display:inline-block!important;font-size:14px!important;letter-spacing:0.5px!important;">Air Care+ Membership</div>
-                                                <h2 class="slider-title mb-3">Don't Wait for Your AC to Break Down</h2>
-                                                <h3 class="slider-teaser mb-3">$29/mo &nbsp;|&nbsp; 2 Tune-Ups &nbsp;|&nbsp; 15% Off Repairs &nbsp;|&nbsp; No Contracts</h3>
-                                                <a class="btn-main mb10 mb-3" href="air-care.html">Explore Air Care+</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row g-4 slider-extra sm-hide">
-                                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                                            <div class="relative">
-                                                <img src="images/icons/white/labor.webp" class="absolute w-80px p-3 mb-3 z-2" alt="First Month Free">
-                                                <div class="pl-100">
-                                                    <h4>First Month Free</h4>
-                                                    <p>Start your Air Care+ plan with zero risk. Cancel anytime.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                                            <div class="relative">
-                                                <img src="images/icons/white/calendar.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Priority Dispatch">
-                                                <div class="pl-100">
-                                                    <h4>Priority Dispatch</h4>
-                                                    <p>Members jump the queue. You are always first.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                                            <div class="relative">
-                                                <img src="images/icons/white/best-price.webp" class="absolute w-80px p-3 mb-3 z-2" alt="15% Off Repairs">
-                                                <div class="pl-100">
-                                                    <h4>15% Off All Repairs</h4>
-                                                    <p>Plus 2 included tune-ups valued at $198/year.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <!-- pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- navigation -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
         </section>
-        <!-- hero slider close -->
+        <!-- hero close -->
 
                     <section class="pt50">
                 <div class="container">
