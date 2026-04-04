@@ -18,10 +18,11 @@
   p { font-size: 14px !important; line-height: 1.7 !important; }
 
   /* ── HEADER (mobile only tweaks) ── */
-  header { background: #fff !important; }
+  header { background: #fff !important; box-shadow: 0 2px 8px rgba(0,44,109,0.08) !important; }
   #logo .logo-main { display: none !important; }
-  #logo .logo-scroll,
-  #logo .logo-mobile { display: block !important; height: 36px !important; }
+  #logo .logo-mobile { display: none !important; }
+  #logo .logo-scroll { display: block !important; height: 34px !important; width: auto !important; }
+  #logo img { height: 34px !important; width: auto !important; }
   header .btn-main { display: none !important; }
   #mobile-brand { display: block !important; }
 
@@ -122,21 +123,8 @@
   .de-has-bg { overflow: hidden !important; }
 }
 
-/* ── LOGO SIZE ── */
-@media only screen and (max-width: 767px) {
-  #logo img { height: 34px !important; width: auto !important; }
-  #logo .logo-main { display: none !important; }
-  #logo .logo-scroll,
-  #logo .logo-mobile { display: block !important; height: 34px !important; }
-}
 
-/* ── LOGO ── */
-@media only screen and (max-width: 767px) {
-  #logo img.logo-scroll { display: block !important; height: 34px !important; width: auto !important; }
-  #logo img.logo-main,
-  #logo img.logo-mobile { display: none !important; }
-  #mobile-brand { display: block !important; }
-}
+
 
 /* ── SWIPER FULL FIX ── */
 @media only screen and (max-width: 767px) {
