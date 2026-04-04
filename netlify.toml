@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/lp-ac-installation"
+  to = "/lp-ac-installation.html"
+  status = 200
+
+[[redirects]]
   from = "/api/submit-lead"
   to = "/.netlify/functions/submit-lead"
   status = 200
