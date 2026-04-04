@@ -187,8 +187,9 @@
                                 <form id="lead-form">
                                     <div class="row g-2">
                                         <div class="col-12"><input type="text" name="firstName" class="form-control" placeholder="Your Name *" required style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12"><input type="tel" name="phone" id="lf-phone" class="form-control" placeholder="Phone Number * (10 digits)" required maxlength="14" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
+                                        <div class="col-12"><input type="tel" name="phone" id="lf-phone" class="form-control" placeholder="Phone Number *" required maxlength="14" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
                                         <div class="col-12"><input type="email" name="email" class="form-control" placeholder="Email (optional)" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
+                                        <div class="col-12"><input type="text" name="zip_code" class="form-control" placeholder="Zip Code *" required style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
                                         <div class="col-12">
                                             <select name="service" class="form-control" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;">
                                                 <option value="">Service Needed *</option><option selected>AC Repair</option><option>AC Replacement</option><option>AC Tune-Up</option><option>New Installation</option><option>Indoor Air Quality</option><option>Air Care+ Membership</option>
@@ -589,7 +590,7 @@
       await fetch('/api/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
       if(typeof gtag!=='undefined') gtag('event','conversion',{'send_to':'AW-17179141807/SI3SCMfOyf8bEK_N0_8_','value':1.0,'currency':'USD'});
       if(typeof fbq!=='undefined') fbq('track','Lead');
-      form.innerHTML = "<div style='text-align:center;padding:24px;'><div style='font-size:40px;margin-bottom:12px;'>✅</div><h4 style='color:#002C6D;margin-bottom:8px;'>You\'re All Set!</h4><p style='color:#666;margin-bottom:16px;'>A Soligo Air specialist will call you shortly.</p><a href='tel:3213847868' style='display:inline-block;background:linear-gradient(135deg,#002C6D,#0047B3);color:#fff;padding:12px 28px;border-radius:8px;font-weight:800;text-decoration:none;'>📞 (321) 384-7868</a></div>";
+      window.location.href = '/thank-you';
     }catch(err){
       btn.textContent = 'Get My Free Quote ›';
       btn.disabled = false;
