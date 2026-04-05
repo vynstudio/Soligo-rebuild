@@ -57,6 +57,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 <a href="/#quote" class="btn btn-primary btn-sm">Free Quote</a>
 </div>
 <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+<span id="menu-btn"></span>
 </div>
 </div>
 <div class="nav-mobile" id="navMobile">
@@ -71,6 +72,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 <a href="tel:3213847868" onclick="gtagConversionCall()" class="nav-mob-phone">(321) 384-7868</a>
 <a href="/#quote" class="btn btn-primary" style="text-align:center;justify-content:center;">Get Free Quote</a>
 </div>
+<span id="mobile-brand" style="display:none;position:absolute;left:50%;transform:translateX(-50%);font-family:Poppins,sans-serif;font-size:19px;font-weight:900;letter-spacing:3px;color:#002C6D;white-space:nowrap;pointer-events:none;top:50%;margin-top:-10px;">SOLIGO AIR</span>
 </nav>
 
 <section style="background:linear-gradient(135deg,var(--bg-dark),#003A8C);padding:80px 0 48px;text-align:center;">
@@ -205,4 +207,18 @@ if(closeBtn)closeBtn.addEventListener('click',closeNav);
 if(backdrop)backdrop.addEventListener('click',closeNav);
 </script>
 <div class="nav-backdrop" id="navBackdrop"></div>
+    <div id="mobile-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 -2px 20px rgba(0,44,109,0.15);padding:12px 16px;gap:10px;">
+        <a href="tel:3213847868" style="background:linear-gradient(135deg,#002C6D,#0047B3);border:none;color:#fff;padding:14px 28px;border-radius:8px;font-weight:800;font-size:15px;text-decoration:none;">
+            📞 Call Us
+        </a>
+        <a href="https://soligoair.shop/#quote" style="flex:1;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:13px 16px;border-radius:8px;font-weight:800;font-size:15px;text-decoration:none;">
+            Get Free Quote
+        </a>
+    </div>
+    <style>
+        @media only screen and (max-width: 767px) {
+            #mobile-cta { display: flex !important; }
+            body { padding-bottom: 80px !important; }
+        }
+    </style>
 </body></html>

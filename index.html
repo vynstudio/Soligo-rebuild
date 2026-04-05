@@ -103,8 +103,7 @@
   header .container{background:#fff!important;}
   header .de-flex{background:#fff!important;position:relative!important;}
   #logo .logo-main{display:none!important;}
-  #logo .logo-mobile{display:none!important;}
-  #logo .logo-scroll{display:block!important;height:34px!important;width:auto!important;}
+  #logo .logo-scroll,#logo .logo-mobile{display:block!important;height:34px!important;}
   header .btn-main,header a.btn-main{display:none!important;}
   #mobile-brand{display:block!important;position:absolute!important;left:50%!important;transform:translateX(-50%)!important;font-family:Poppins,sans-serif!important;font-size:13px!important;font-weight:800!important;letter-spacing:2.5px!important;color:#002C6D!important;white-space:nowrap!important;top:50%!important;margin-top:-8px!important;pointer-events:none!important;}
   #menu-btn{display:flex!important;}
@@ -123,17 +122,21 @@
 
         <!-- header begin -->
         <header class="transparent scroll-light has-topbar">
+            
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="de-flex sm-pt10">
                             <div class="de-flex-col">
+                                <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-scroll" src="/icon-v2.png" alt="Soligo Air" style="height:38px">
-                                    </a>
+                                        <img class="logo-scroll" src="/icon-v2.png" alt="Soligo Air" style="height:42px">
+                                        </a>
                                 </div>
+                                <!-- logo close -->
                             </div>
+                            <span id="mobile-brand" style="display:none;position:absolute;left:50%;transform:translateX(-50%);font-family:Poppins,sans-serif;font-size:19px;font-weight:900;letter-spacing:3px;color:#002C6D;white-space:nowrap;pointer-events:none;top:50%;margin-top:-10px;">SOLIGO AIR</span>
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li><a class="menu-item" href="#">Services</a>
@@ -160,53 +163,114 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- header close -->
 
-        <!-- hero begin -->
-        <section id="hero" style="position:relative;min-height:100vh;background:url(images/slider/1.webp) center/cover no-repeat;display:flex;align-items:center;">
-            <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,8,30,0.82) 0%,rgba(0,30,70,0.68) 100%);z-index:0;"></div>
-            <div style="position:relative;z-index:1;width:100%;padding:120px 0 80px;">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 text-center">
-                            <div style="display:inline-block;background:#F75600;color:#fff;font-size:13px;font-weight:700;padding:6px 20px;border-radius:999px;letter-spacing:0.5px;margin-bottom:24px;">Central Florida HVAC</div>
-                            <h1 style="font-size:clamp(2rem,5vw,3.8rem);font-weight:800;color:#fff!important;line-height:1.15;margin-bottom:20px;letter-spacing:-0.02em;text-shadow:0 2px 8px rgba(0,0,0,0.3);">Fast &amp; Reliable<br>AC Services in <span style="color:#F75600;">Orlando</span></h1>
-                            <p style="font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.9)!important;margin-bottom:36px;line-height:1.6;">Same-Day Service &nbsp;·&nbsp; FL Licensed &nbsp;·&nbsp; 0% Financing &nbsp;·&nbsp; 5.0 ⭐ Rated</p>
-                            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-                                <a href="tel:3213847868" onclick="gtagConversionCall()" style="display:inline-flex;align-items:center;gap:10px;background:#F75600;color:#fff;padding:16px 32px;border-radius:8px;font-weight:800;font-size:1.05rem;text-decoration:none;box-shadow:0 4px 20px rgba(247,86,0,0.4);transition:transform .15s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">📞 (321) 384-7868</a>
-                                <a href="#quote" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);color:#fff;padding:16px 32px;border-radius:8px;font-weight:700;font-size:1.05rem;text-decoration:none;border:1.5px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px);transition:transform .15s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Get Free Quote →</a>
-                            </div>
+                                        <div class="row g-4 slider-extra sm-hide">
+                                            <div class="col-lg-4 col-md-6 mb-sm-30">
+                                                <div class="relative">
+                                                    <img src="images/icons/white/labor.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Licensed Technician">
+                                                                                                        <div class="pl-100">
+                                                        <h4>FL Licensed Technicians</h4>
+                                                        <p>EPA-certified, manufacturer-trained. FL #CAC1823002.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-4 col-md-6 mb-sm-30">
+                                                <div class="relative">
+                                                    <img src="images/icons/white/calendar.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Same-Day Service">
+                                                                                                        <div class="pl-100">
+                                                        <h4>Same-Day Service</h4>
+                                                        <p>Fast response across all of Central Florida, anytime.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-4 col-md-6 mb-sm-30">
+                                                <div class="relative">
+                                                    <img src="images/icons/white/best-price.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Transparent Pricing">
+                                                                                                        <div class="pl-100">
+                                                        <h4>Transparent Pricing</h4>
+                                                        <p>Upfront quotes, no hidden charges, 0% financing.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            </div>
                         </div>
-                    </div>
-                    <!-- trust bar -->
-                    <div class="row justify-content-center" style="margin-top:60px;">
-                        <div class="col-lg-10">
-                            <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
-                                <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.85);">
-                                    <img src="images/icons/white/labor.webp" style="height:36px;width:auto;" alt="Licensed">
-                                    <div><div style="font-weight:700;font-size:0.9rem;">FL Licensed</div><div style="font-size:0.78rem;opacity:0.7;">CAC1823002</div></div>
-                                </div>
-                                <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.85);">
-                                    <img src="images/icons/white/calendar.webp" style="height:36px;width:auto;" alt="Same Day">
-                                    <div><div style="font-weight:700;font-size:0.9rem;">Same-Day</div><div style="font-size:0.78rem;opacity:0.7;">Available 24/7</div></div>
-                                </div>
-                                <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.85);">
-                                    <img src="images/icons/white/best-price.webp" style="height:36px;width:auto;" alt="Pricing">
-                                    <div><div style="font-weight:700;font-size:0.9rem;">Upfront Pricing</div><div style="font-size:0.78rem;opacity:0.7;">0% Financing</div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- hero close -->
+                        <!-- Slides -->
 
-                    <section class="pt50">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="swiper-inner" data-bgimage="url(images/slider/2.webp)" style="position:relative;">
+                                <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,8,30,0.75) 0%,rgba(0,18,55,0.62) 100%);z-index:1;pointer-events:none;"></div>
+                                <div class="sw-caption" style="position:relative;z-index:2;padding-left:0;">
+                                    <div class="container">
+                                        <div class="row gx-5 align-items-center">
+
+                                            
+                                            <div class="col-lg-8 offset-lg-2 text-center">     
+                                                                                                <div class="sw-text-wrapper">
+                                                    <div class="subtitle s2 mb-2" style="background:#F75600!important;color:#fff!important;font-weight:700!important;padding:6px 18px!important;border-radius:999px!important;display:inline-block!important;font-size:14px!important;letter-spacing:0.5px!important;">Air Care+ Membership</div>
+                                                    <h2 class="slider-title mb-3">Don't Wait for Your AC to Break Down</h2>
+                                                    <h3 class="slider-teaser mb-3">$29/mo &nbsp;|&nbsp; 2 Tune-Ups &nbsp;|&nbsp; 15% Off Repairs &nbsp;|&nbsp; No Contracts</h3>
+                                                                                                        <a class="btn-main mb10 mb-3" href="air-care.html">Explore Air Care+</a>
+                                                </div>
+                                            </div>
+
+                                                                                    </div>
+
+                                        <div class="row g-4 slider-extra sm-hide">
+                                            <div class="col-lg-4 col-md-6 mb-sm-30">
+                                                <div class="relative">
+                                                    <img src="images/icons/white/labor.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Licensed Technician">
+                                                                                                        <div class="pl-100">
+                                                        <h4>First Month Free</h4>
+                                                        <p>Start your Air Care+ plan with zero risk. Cancel anytime.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-4 col-md-6 mb-sm-30">
+                                                <div class="relative">
+                                                    <img src="images/icons/white/calendar.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Same-Day Service">
+                                                                                                        <div class="pl-100">
+                                                        <h4>Priority Dispatch</h4>
+                                                        <p>Members jump the queue. You are always first.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-4 col-md-6 mb-sm-30">
+                                                <div class="relative">
+                                                    <img src="images/icons/white/best-price.webp" class="absolute w-80px p-3 mb-3 z-2" alt="Transparent Pricing">
+                                                                                                        <div class="pl-100">
+                                                        <h4>15% Off All Repairs</h4>
+                                                        <p>Plus 2 included tune-ups valued at $198/year.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                                            </div>
+                        </div>
+                        <!-- Slides -->
+                        
+
+                      </div>
+                      <!-- If we need pagination -->
+                      
+                      <!-- If we need navigation buttons -->
+                                            
+                      <!-- If we need scrollbar -->
+                                          </div>
+                </div>
+            </section>
+
+            <section class="pt50">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
@@ -776,22 +840,32 @@
                         <div class="padding40 rounded-20px" style="background:#fff;box-shadow:0 8px 40px rgba(0,44,109,0.10);">
                             <h4 class="mb-4">Get My Free Quote</h4>
                             <form id="lead-form">
-                                    <div class="row g-2">
-                                        <div class="col-12"><input type="text" name="firstName" class="form-control" placeholder="Your Name *" required style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12"><input type="tel" name="phone" id="lf-phone" class="form-control" placeholder="Phone Number *" required maxlength="14" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12"><input type="email" name="email" class="form-control" placeholder="Email (optional)" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12"><input type="text" name="zip_code" class="form-control" placeholder="Zip Code *" required style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12">
-                                            <select name="service" class="form-control" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;">
-                                                <option value="">Service Needed *</option><option>AC Repair</option><option>AC Replacement</option><option>AC Tune-Up</option><option>New Installation</option><option>Indoor Air Quality</option><option>Air Care+ Membership</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="submit" style="width:100%;background:linear-gradient(135deg,#F75600,#FF7A30);border:none;color:#fff;padding:14px;border-radius:8px;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 4px 15px rgba(247,86,0,0.3);">Get My Free Quote &rsaquo;</button>
-                                        </div>
-                                        <div class="col-12 text-center" style="font-size:12px;color:#aaa;">No commitment &middot; Upfront pricing guaranteed</div>
+                                <div class="row g-3">
+                                    <div class="col-md-6"><input type="text" name="firstName" class="form-control" placeholder="First Name" required></div>
+                                    <div class="col-md-6"><input type="text" name="lastName" class="form-control" placeholder="Last Name"></div>
+                                    <div class="col-12"><input type="tel" name="phone" class="form-control" placeholder="Phone Number" required></div>
+                                    <div class="col-12">
+                                        <select name="service" class="form-control" required>
+                                            <option value="">Service Needed</option>
+                                            <option>AC Repair</option><option>AC Replacement</option>
+                                            <option>New Installation</option><option>Tune-Up / Maintenance</option>
+                                            <option>Air Care+ Membership</option><option>Other</option>
+                                        </select>
                                     </div>
-                                </form>
+                                    <div class="col-12">
+                                        <select name="city" class="form-control">
+                                            <option value="">Your City</option>
+                                            <option>Orlando</option><option>Winter Park</option><option>Kissimmee</option>
+                                            <option>Clermont</option><option>Apopka</option><option>Lake Mary</option>
+                                            <option>Altamonte Springs</option><option>Sanford</option><option>Other Central FL</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn-main" style="width:100%;border:none;cursor:pointer;padding:16px;font-size:16px;font-weight:800;">Get My Free Quote &rsaquo;</button>
+                                    </div>
+                                    <div class="col-12 text-center"><small class="text-muted">No commitment required. Upfront pricing guaranteed.</small></div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -928,7 +1002,19 @@
     <script src="js/custom-swiper-1.js"></script>
 
 
-    
+    <script>
+    document.getElementById("lead-form").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        var data = {};
+        new FormData(this).forEach(function(v,k){data[k]=v;});
+        try {
+            await fetch("/api/submit-lead", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+            if(typeof gtag!=="undefined")gtag("event","conversion",{"send_to":"AW-17179141807/SI3SCMfOyf8bEK_N0_8_","value":1.0,"currency":"USD"});
+            if(typeof fbq!=="undefined")fbq("track","Lead");
+            this.innerHTML = "<div style='text-align:center;padding:30px;'><h4 style='color:#002C6D;'>You Are All Set!</h4><p>A Soligo Air specialist will call you shortly.</p><a href='tel:3213847868' class='btn-main bg-color-2'>Call Now: (321) 384-7868</a></div>";
+        } catch(err) { alert("Please call us at (321) 384-7868"); }
+    });
+    </script>
 
     <!-- Mobile Sticky CTA Bar -->
     <div id="mobile-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 -2px 20px rgba(0,44,109,0.15);padding:12px 16px;gap:10px;">
@@ -974,51 +1060,6 @@
         window.addEventListener("resize", show);
     })();
     </script>
-<script>
-(function(){
-  // Phone formatter — (XXX) XXX-XXXX
-  var ph = document.getElementById('lf-phone');
-  if(ph){
-    ph.addEventListener('input', function(){
-      var digits = this.value.replace(/\D/g,'').substring(0,10);
-      var fmt = '';
-      if(digits.length > 0) fmt = '(' + digits.substring(0,3);
-      if(digits.length >= 4) fmt += ') ' + digits.substring(3,6);
-      if(digits.length >= 7) fmt += '-' + digits.substring(6,10);
-      this.value = fmt;
-    });
-  }
-
-  var form = document.getElementById('lead-form');
-  if(!form) return;
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    var digits = (form.querySelector('[name=phone]').value || '').replace(/\D/g,'');
-    if(digits.length < 10){ alert('Please enter a valid 10-digit phone number.'); return; }
-    var btn = form.querySelector('button[type=submit]');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    var data = {};
-    new FormData(form).forEach(function(v,k){ data[k]=v; });
-    data.source_page = window.location.pathname;
-    data.source = 'website';
-    data.fbp = (document.cookie.match(/_fbp=([^;]+)/)||[])[1]||'';
-    data.fbc = (document.cookie.match(/_fbc=([^;]+)/)||[])[1]||'';
-    data.user_agent = navigator.userAgent;
-    data.source_url = location.href;
-    try{
-      await fetch('/api/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
-      if(typeof gtag!=='undefined') gtag('event','conversion',{'send_to':'AW-17179141807/SI3SCMfOyf8bEK_N0_8_','value':1.0,'currency':'USD'});
-      if(typeof fbq!=='undefined') fbq('track','Lead');
-      window.location.href = '/thank-you';
-    }catch(err){
-      btn.textContent = 'Get My Free Quote ›';
-      btn.disabled = false;
-      alert('Something went wrong. Please call us at (321) 384-7868');
-    }
-  });
-})();
-</script>
 </body>
 
 </html>

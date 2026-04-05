@@ -90,7 +90,7 @@
   header .container{background:#fff!important;}
   header .de-flex{background:#fff!important;position:relative!important;}
   #logo .logo-main{display:none!important;}
-  #logo .logo-main{display:none!important;}#logo .logo-mobile{display:none!important;}#logo .logo-scroll{display:block!important;height:34px!important;width:auto!important;}
+  #logo .logo-scroll,#logo .logo-mobile{display:block!important;height:34px!important;}
   header .btn-main,header a.btn-main{display:none!important;}
   #mobile-brand{display:block!important;position:absolute!important;left:50%!important;transform:translateX(-50%)!important;font-family:Poppins,sans-serif!important;font-size:13px!important;font-weight:800!important;letter-spacing:2.5px!important;color:#002C6D!important;white-space:nowrap!important;top:50%!important;margin-top:-8px!important;pointer-events:none!important;}
   #menu-btn{display:flex!important;}
@@ -169,21 +169,13 @@
                             <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 40px rgba(0,0,0,0.2);" id="quote">
                                 <h4 style="color:#002C6D;font-weight:800;margin-bottom:4px;font-size:1.1rem;">Get Your Free Quote</h4>
                                 <p style="color:#888;font-size:13px;margin-bottom:20px;">A specialist calls you within minutes.</p>
-                                <form id="lead-form">
+                                <form id="page-form">
                                     <div class="row g-2">
-                                        <div class="col-12"><input type="text" name="firstName" class="form-control" placeholder="Your Name *" required style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12"><input type="tel" name="phone" id="lf-phone" class="form-control" placeholder="Phone Number *" required maxlength="14" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12"><input type="email" name="email" class="form-control" placeholder="Email (optional)" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12"><input type="text" name="zip_code" class="form-control" placeholder="Zip Code *" required style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;"></div>
-                                        <div class="col-12">
-                                            <select name="service" class="form-control" style="border-radius:8px;font-size:16px;border:1.5px solid #e0e6f0;">
-                                                <option value="">Service Needed *</option><option>AC Repair</option><option selected>AC Replacement</option><option>AC Tune-Up</option><option>New Installation</option><option>Indoor Air Quality</option><option>Air Care+ Membership</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="submit" style="width:100%;background:linear-gradient(135deg,#F75600,#FF7A30);border:none;color:#fff;padding:14px;border-radius:8px;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 4px 15px rgba(247,86,0,0.3);">Get My Free Quote &rsaquo;</button>
-                                        </div>
-                                        <div class="col-12 text-center" style="font-size:12px;color:#aaa;">No commitment &middot; Upfront pricing guaranteed</div>
+                                        <div class="col-6"><input type="text" name="firstName" class="form-control" placeholder="First Name" required style="border-radius:8px;font-size:14px;border:1.5px solid #e0e6f0;"></div>
+                                        <div class="col-6"><input type="tel" name="phone" class="form-control" placeholder="Phone Number" required style="border-radius:8px;font-size:14px;border:1.5px solid #e0e6f0;"></div>
+                                        <div class="col-12"><input type="hidden" name="service" value="AC Replacement Orlando"></div>
+                                        <div class="col-12"><button type="submit" style="width:100%;background:linear-gradient(135deg,#F75600,#FF7A30);border:none;color:#fff;padding:14px;border-radius:8px;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 4px 15px rgba(247,86,0,0.3);">Get My Free Quote &rsaquo;</button></div>
+                                        <div class="col-12 text-center" style="font-size:12px;color:#aaa;">No commitment · Upfront pricing guaranteed</div>
                                     </div>
                                 </form>
                             </div>
@@ -318,10 +310,29 @@
     <script src="js/custom-swiper-1.js"></script>
 
 
-    
+    <script>
+    document.getElementById("lead-form").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        var data = {};
+        new FormData(this).forEach(function(v,k){data[k]=v;});
+        try {
+            await fetch("/api/submit-lead", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+            if(typeof gtag!=="undefined")gtag("event","conversion",{"send_to":"AW-17179141807/SI3SCMfOyf8bEK_N0_8_","value":1.0,"currency":"USD"});
+            if(typeof fbq!=="undefined")fbq("track","Lead");
+            this.innerHTML = "<div style='text-align:center;padding:30px;'><h4 style='color:#002C6D;'>You Are All Set!</h4><p>A Soligo Air specialist will call you shortly.</p><a href='tel:3213847868' class='btn-main bg-color-2'>Call Now: (321) 384-7868</a></div>";
+        } catch(err) { alert("Please call us at (321) 384-7868"); }
+    });
+    </script>
 
     <!-- Mobile Sticky CTA Bar -->
-    
+    <div id="mobile-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 -2px 20px rgba(0,44,109,0.15);padding:12px 16px;gap:10px;">
+        <a href="tel:3213847868" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#002C6D,#0047B3);color:#fff;padding:13px 16px;border-radius:8px;font-weight:800;font-size:15px;text-decoration:none;">
+            📞 Call Us
+        </a>
+        <a href="#quote" style="flex:1;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:13px 16px;border-radius:8px;font-weight:800;font-size:15px;text-decoration:none;" onclick="document.getElementById('mobile-cta').style.display='none';setTimeout(()=>document.getElementById('mobile-cta').style.display='flex',2000)">
+            Get Free Quote
+        </a>
+    </div>
     <style>
         @media only screen and (max-width: 767px) {
             #mobile-cta { display: flex !important; }
@@ -347,59 +358,20 @@
     });
     </script>
 
-    <!-- Mobile Sticky CTA -->
-    <div id="mobile-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 -2px 20px rgba(0,44,109,0.15);padding:12px 16px;gap:10px;">
-        <a href="tel:3213847868" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#002C6D,#0047B3);color:#fff;padding:13px 16px;border-radius:8px;font-weight:800;font-size:15px;text-decoration:none;">📞 Call Us</a>
-        <a href="#quote" style="flex:1;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:13px 16px;border-radius:8px;font-weight:800;font-size:15px;text-decoration:none;">Get Free Quote</a>
-    </div>
-    <style>@media only screen and (max-width:767px){{#mobile-cta{{display:flex!important;}}body{{padding-bottom:80px!important;}}}}</style>
-    
-
-    
-<script>
-(function(){
-  // Phone formatter — (XXX) XXX-XXXX
-  var ph = document.getElementById('lf-phone');
-  if(ph){
-    ph.addEventListener('input', function(){
-      var digits = this.value.replace(/\D/g,'').substring(0,10);
-      var fmt = '';
-      if(digits.length > 0) fmt = '(' + digits.substring(0,3);
-      if(digits.length >= 4) fmt += ') ' + digits.substring(3,6);
-      if(digits.length >= 7) fmt += '-' + digits.substring(6,10);
-      this.value = fmt;
+    <script>
+    document.getElementById("page-form").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        var data = {service: "AC Replacement"};
+        new FormData(this).forEach(function(v,k){data[k]=v;});
+        try {
+            await fetch("/api/submit-lead", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+            if(typeof gtag!=="undefined")gtag("event","conversion",{"send_to":"AW-17179141807/SI3SCMfOyf8bEK_N0_8_","value":1.0,"currency":"USD"});
+            if(typeof fbq!=="undefined")fbq("track","Lead");
+            this.innerHTML = "<div style='text-align:center;padding:20px;'><h4 style='color:#002C6D;'>You Are All Set!</h4><p style='color:#666;'>A specialist will call you shortly.</p><a href='tel:3213847868' style='background:linear-gradient(135deg,#F75600,#FF7A30);color:#fff;padding:12px 24px;border-radius:8px;font-weight:800;text-decoration:none;display:inline-block;margin-top:8px;'>Call Now: (321) 384-7868</a></div>";
+        } catch(err) { alert("Please call us at (321) 384-7868"); }
     });
-  }
+    </script>
 
-  var form = document.getElementById('lead-form');
-  if(!form) return;
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    var digits = (form.querySelector('[name=phone]').value || '').replace(/\D/g,'');
-    if(digits.length < 10){ alert('Please enter a valid 10-digit phone number.'); return; }
-    var btn = form.querySelector('button[type=submit]');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    var data = {};
-    new FormData(form).forEach(function(v,k){ data[k]=v; });
-    data.source_page = window.location.pathname;
-    data.source = 'website';
-    data.fbp = (document.cookie.match(/_fbp=([^;]+)/)||[])[1]||'';
-    data.fbc = (document.cookie.match(/_fbc=([^;]+)/)||[])[1]||'';
-    data.user_agent = navigator.userAgent;
-    data.source_url = location.href;
-    try{
-      await fetch('/api/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
-      if(typeof gtag!=='undefined') gtag('event','conversion',{'send_to':'AW-17179141807/SI3SCMfOyf8bEK_N0_8_','value':1.0,'currency':'USD'});
-      if(typeof fbq!=='undefined') fbq('track','Lead');
-      window.location.href = '/thank-you';
-    }catch(err){
-      btn.textContent = 'Get My Free Quote ›';
-      btn.disabled = false;
-      alert('Something went wrong. Please call us at (321) 384-7868');
-    }
-  });
-})();
-</script>
+    
 </body>
 </html>
